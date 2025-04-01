@@ -14,11 +14,12 @@ function App() {
   };
 
 
+
   return (
     <div className="App">
       {loggedInUser ? (
         <div>
-          <p>Welome back {loggedInUser}</p>
+          <p>Welcome back {loggedInUser}</p>
           <button onClick={handleLogout}>Logout</button>
         </div>
       ) : (

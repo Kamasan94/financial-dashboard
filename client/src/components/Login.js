@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from 'axios';
-import '/style.css';
+import './style.css'
 
 const Login = ( {setLoggedInUser} ) => {
 
@@ -15,9 +15,7 @@ const Login = ( {setLoggedInUser} ) => {
 
     const {username, password} = formData;
 
-    const onChange = e => {
-        setFormData({...formData, [e.target.name] : e.target.value});
-    }
+    const onChange = e => setFormData({...formData, [e.target.name] : e.target.value});
 
     const onSubmit = async e => {
         e.preventDefault();
@@ -44,7 +42,7 @@ const Login = ( {setLoggedInUser} ) => {
                     placeholder="Username"
                     name="username"
                     value={username}
-                    onChange={onchange}
+                    onChange={onChange}
                     required />
                 <input type="password"
                     placeholder="Password"
