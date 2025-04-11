@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const express = require('express');
 var cors = require('cors');
 const authRoutes = require('./routes/auth');
+const transactionRoutes = require('./routes/transactionRoutes');
 
 //Enable cors options for JSON response
 var corsOptions = {
@@ -39,6 +40,7 @@ app.get('/', cors(corsOptions), (req, res) => {
 
 //Enable auth api
 app.use('/api/auth',authRoutes);
+app.use('/api/transactions', transactionRoutes);
 
 
 //Listening to requests

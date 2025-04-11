@@ -48,6 +48,7 @@ const Register = ({ setLoggedInUser }) => {
                 />
                 <button type="submit">Register</button>
             </form>
+            <p className="message">{message}</p>
         </div>
     );
 };
