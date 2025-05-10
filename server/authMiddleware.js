@@ -2,6 +2,7 @@
 // Verify it
 // Add req.userId into the request
 
+//The middleware is an important security part for checking the requests to the server
 const jwtSecret = process.env.jwtSecret;
 
 module.exports = {

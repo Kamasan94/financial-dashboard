@@ -4,6 +4,7 @@ import './style.css'
 
 const Login = ( {setLoggedInUser} ) => {
 
+    //Initialized as an object
     const [formData, setFormData] = useState (
         {
             username : '',

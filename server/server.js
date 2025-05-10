@@ -1,7 +1,9 @@
-require('dotenv').config();
-const mongoose = require('mongoose');
-const express = require('express');
-var cors = require('cors');
+require('dotenv').config();  //The library for importing configuratin file
+const mongoose = require('mongoose'); //Library for mongodb 
+const express = require('express'); 
+var cors = require('cors'); //For middleware cors
+
+//Routes 
 const authRoutes = require('./routes/auth');
 const transactionRoutes = require('./routes/transactionRoutes');
 
@@ -38,10 +40,9 @@ app.get('/', cors(corsOptions), (req, res) => {
     res.json({msg: 'This is CORS-enabled'});
 });
 
-//Enable auth api
+//Enable apis
 app.use('/api/auth',authRoutes);
 app.use('/api/transactions', transactionRoutes);
-
 
 //Listening to requests
 app.listen(PORT, () => {
